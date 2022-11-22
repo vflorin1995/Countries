@@ -2,3 +2,21 @@ body {
   margin: 0;
   font-size: 2rem;
 }
+
+.countryContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 320px;
+}
