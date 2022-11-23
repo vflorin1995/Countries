@@ -8,7 +8,6 @@ const CountryContainer = () => {
   const optionArr = ['Africa', 'Europe', 'Asia', 'Antarctica', 'North America', 'South America', 'Oceania'];
   const [continent, setContinent] = useState('Africa');
   const workingArr = tari.filter((item) => item.continents[0] === continent);
-  console.log(workingArr);
   return (
     <div className="countryContainer">
       <select className="continent" onChange={(e) => setContinent(e.target.value)}>
