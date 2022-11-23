@@ -27,7 +27,7 @@ const OneCountry = () => {
         Latitude:
         {tara.latlng[0]}
       </div>
-      <div>
+      <div data-testid="long">
         Longitude:
         {tara.latlng[1]}
       </div>
