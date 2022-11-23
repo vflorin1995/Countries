@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Jest Snapshot testing suite Country container snapshot 1`] = `
+<div
+  className="countryContainer"
+>
+  <select
+    className="continent"
+    onChange={[Function]}
+  >
+    <option>
+      Africa
+    </option>
+    <option>
+      Europe
+    </option>
+    <option>
+      Asia
+    </option>
+    <option>
+      Antarctica
+    </option>
+    <option>
+      North America
+    </option>
+    <option>
+      South America
+    </option>
+    <option>
+      Oceania
+    </option>
+  </select>
+  <section
+    className="flex"
+  />
+</div>
+`;
