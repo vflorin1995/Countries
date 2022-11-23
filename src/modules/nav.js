@@ -1,6 +1,15 @@
+import { NavLink } from 'react-router-dom';
+import { AiOutlineArrowLeft, AiFillSetting } from 'react-icons/ai';
+
 const Nav = () => (
   <nav>
-    Navigation
+    <NavLink to="/">
+      <AiOutlineArrowLeft />
+    </NavLink>
+    <div>
+      Countries
+    </div>
+    <AiFillSetting />
   </nav>
 );
 

@@ -1,16 +1,15 @@
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Countries from '../redux/fetch';
 
 const OneCountry = () => {
   const { countryName } = useParams();
-  const tari = useSelector(Countries);
+  const tari = useSelector((state) => state.countries);
   const tara = tari.filter((item) => item.name.common === countryName)[0];
   if (tara === undefined) {
     return (<>Loading</>);
   }
   return (
-    <>
+    <div className="country">
       <img src={tara.flags.png} alt="flag" />
       <div>
         Country name:
@@ -33,10 +32,10 @@ const OneCountry = () => {
         {tara.latlng[1]}
       </div>
       <div>
-        Timezone
+        Timezone:
         {tara.timezones}
       </div>
-    </>
+    </div>
   );
 };
 

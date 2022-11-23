@@ -29,4 +29,4 @@ export const fetchData = () => async (dispatch) => {
   dispatch(Data(countryList));
 };
 
-export const store = configureStore({ reducer: Countries });
+export const store = configureStore({ reducer: { countries: Countries } });
