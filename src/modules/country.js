@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 const Country = ({ name, flags }) => (
   <>
     <img src={flags} alt="flag" />
-    <div>{name}</div>
+    <div className="flex">{name}</div>
   </>
 );
 

@@ -26,8 +26,7 @@ export const fetchData = () => async (dispatch) => {
   await fetch(URL)
     .then((response) => response.json())
     .then((data) => { countryList = data; });
-  console.log(countryList);
   dispatch(Data(countryList));
 };
 
-export const store = configureStore({ reducer: Countries });
+export const store = configureStore({ reducer: { countries: Countries } });

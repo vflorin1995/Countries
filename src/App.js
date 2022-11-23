@@ -16,7 +16,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<CountryContainer />} />
-        <Route path="/:countryName" element={<OneCountry />} />
+        <Route path="/c/:countryName" element={<OneCountry />} />
       </Routes>
     </BrowserRouter>
   );
