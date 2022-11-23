@@ -16,7 +16,7 @@ const CountryContainer = () => {
       </select>
       <section className="flex">
         {workingArr.map((item) => (
-          <Link className="card" key={item.name.common} to={`c/${item.name.common}`}>
+          <Link className="card" key={item.name.common} data-testid="country" to={`c/${item.name.common}`}>
             <Country name={item.name.common} flags={item.flags.png} />
           </Link>
         ))}
