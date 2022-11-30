@@ -10,29 +10,29 @@ const OneCountry = () => {
   }
   return (
     <div className="country">
-      <img src={tara.flags.png} alt="flag" />
+      <img src={tara.flags.png} className="steagu" alt="flag" />
       <div>
-        Country name:
-        {tara.name.common}
+        <p className="bold">Country name:</p>
+        {tara.name.common.split(' ').slice(0, 5).join(' ')}
       </div>
       <div>
-        Country capital:
+        <p className="bold">Country capital:</p>
         {tara.capital}
       </div>
       <div>
-        First language:
+        <p className="bold">First language:</p>
         {Object.values(tara.languages)[0]}
       </div>
       <div>
-        Latitude:
+        <p className="bold">Latitude:</p>
         {tara.latlng[0]}
       </div>
       <div data-testid="long">
-        Longitude:
+        <p className="bold">Longitude:</p>
         {tara.latlng[1]}
       </div>
       <div>
-        Timezone:
+        <p className="bold">Timezone:</p>
         {tara.timezones}
       </div>
     </div>

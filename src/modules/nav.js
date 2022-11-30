@@ -6,8 +6,8 @@ const Nav = () => (
     <NavLink to="/">
       <AiOutlineArrowLeft />
     </NavLink>
-    <div>
-      Countries
+    <div className="navTitle">
+      Where would you like to go?
     </div>
     <AiFillSetting />
   </nav>
