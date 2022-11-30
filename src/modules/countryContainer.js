@@ -22,14 +22,14 @@ const CountryContainer = () => {
     workingArr = tari.filter((item) => item.continents[0] === continent);
   }
   return (
-    <div className="countryContainer">
+    <div className="flex countryContainer">
       <select className="continent" onChange={(e) => setContinent(e.target.value)}>
         <option hidden>Please select a continent</option>
         {optionArr.map((item) => <option key={item}>{item}</option>)}
       </select>
-      <section className="flex">
+      <section className="flex cardContainer">
         {workingArr.map((item) => (
-          <Link className="card" key={item.name.common} data-testid="country" to={`c/${item.name.common}`}>
+          <Link className="flex card" key={item.name.common} data-testid="country" to={`c/${item.name.common}`}>
             <Country name={item.name.common} flags={item.flags.png} />
           </Link>
         ))}

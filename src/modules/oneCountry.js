@@ -5,11 +5,11 @@ const OneCountry = () => {
   const { countryName } = useParams();
   const tari = useSelector((state) => state.countries);
   const tara = tari.filter((item) => item.name.common === countryName)[0];
-  if (tara === undefined) {
+  while (tara === undefined) {
     return (<>Loading</>);
   }
   return (
-    <div className="country">
+    <div className="flex country">
       <img src={tara.flags.png} className="steagu" alt="flag" />
       <div>
         <p className="bold">Country name:</p>
