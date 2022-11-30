@@ -4,13 +4,27 @@ import { Link } from 'react-router-dom';
 import Country from './country';
 
 const CountryContainer = () => {
-  const tari = useSelector((state) => state.countries);
+  let tari = useSelector((state) => state.countries);
+  tari = tari.sort((t1, t2) => {
+    if (t1.name.common > t2.name.common) {
+      return 1;
+    } if (t1.name.common < t2.name.common) {
+      return -1;
+    }
+    return 0;
+  });
   const optionArr = ['Africa', 'Europe', 'Asia', 'Antarctica', 'North America', 'South America', 'Oceania'];
-  const [continent, setContinent] = useState('Africa');
-  const workingArr = tari.filter((item) => item.continents[0] === continent);
+  const [continent, setContinent] = useState('All');
+  let workingArr;
+  if (continent === 'All') {
+    workingArr = tari;
+  } else {
+    workingArr = tari.filter((item) => item.continents[0] === continent);
+  }
   return (
     <div className="countryContainer">
       <select className="continent" onChange={(e) => setContinent(e.target.value)}>
+        <option hidden>Please select a continent</option>
         {optionArr.map((item) => <option key={item}>{item}</option>)}
       </select>
       <section className="flex">
