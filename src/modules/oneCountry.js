@@ -5,35 +5,35 @@ const OneCountry = () => {
   const { countryName } = useParams();
   const tari = useSelector((state) => state.countries);
   const tara = tari.filter((item) => item.name.common === countryName)[0];
-  if (tara === undefined) {
+  while (tara === undefined) {
     return (<>Loading</>);
   }
   return (
-    <div className="country">
-      <img src={tara.flags.png} alt="flag" />
+    <div className="flex country">
+      <img src={tara.flags.png} className="steagu" alt="flag" />
       <div>
-        Country name:
-        {tara.name.common}
+        <p className="bold">Country name:</p>
+        {tara.name.common.split(' ').slice(0, 5).join(' ')}
       </div>
       <div>
-        Country capital:
-        {tara.capital}
+        <p className="bold">Country capital:</p>
+        {'NA' || tara.capital}
       </div>
       <div>
-        First language:
-        {Object.values(tara.languages)[0]}
+        <p className="bold">First language:</p>
+        {'NA' || Object.values(tara.languages)[0]}
       </div>
       <div>
-        Latitude:
+        <p className="bold">Latitude:</p>
         {tara.latlng[0]}
       </div>
       <div data-testid="long">
-        Longitude:
+        <p className="bold">Longitude:</p>
         {tara.latlng[1]}
       </div>
       <div>
-        Timezone:
-        {tara.timezones}
+        <p className="bold">Timezone:</p>
+        {(tara.timezones.length > 1) ? `${tara.timezones[0]} to ${tara.timezones[tara.timezones.length - 1]}` : tara.timezones[0] }
       </div>
     </div>
   );
