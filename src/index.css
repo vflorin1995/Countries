@@ -18,7 +18,7 @@ body {
   background-color: white;
   max-width: 900px;
   border-radius: 10px;
-  box-shadow: 1px 2px 20px lightblue; 
+  box-shadow: 1px 2px 20px lightblue;
 }
 
 .bold {
@@ -96,6 +96,7 @@ a:hover {
   from {
     scale: 1;
   }
+
   to {
     scale: 1.05;
   }
@@ -116,7 +117,7 @@ select {
 }
 
 .title {
-  padding:0 12px;
+  padding: 0 12px;
   margin: auto;
   text-align: center;
 }
@@ -129,5 +130,5 @@ select {
   align-items: center;
   font-size: 3rem;
   font-weight: 900;
-  color:red;
+  color: red;
 }
