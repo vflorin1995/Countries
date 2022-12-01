@@ -17,11 +17,11 @@ const OneCountry = () => {
       </div>
       <div>
         <p className="bold">Country capital:</p>
-        {tara.capital}
+        {'NA' || tara.capital}
       </div>
       <div>
         <p className="bold">First language:</p>
-        {Object.values(tara.languages)[0]}
+        {'NA' || Object.values(tara.languages)[0]}
       </div>
       <div>
         <p className="bold">Latitude:</p>
@@ -33,7 +33,7 @@ const OneCountry = () => {
       </div>
       <div>
         <p className="bold">Timezone:</p>
-        {tara.timezones}
+        {(tara.timezones.length > 1) ? `${tara.timezones[0]} to ${tara.timezones[tara.timezones.length - 1]}` : tara.timezones[0] }
       </div>
     </div>
   );
