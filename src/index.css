@@ -1,36 +1,43 @@
 body {
-  margin: 0;
+  margin: 24px;
   font-size: 2rem;
-  background-color: hsl(337, 81%, 61%);
+  background-color: #f7f7f7;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.countryContainer {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .flex {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  gap: 1px;
-  align-items: center;
-  justify-content: center;
 }
 
-.card {
-  display: flex;
+/* one country */
+
+.country {
   flex-direction: column;
-  justify-content: center;
+  margin: 30px auto;
   align-items: center;
-  max-width: 320px;
-  height: 320px;
-  background-color: hsl(337, 81%, 91%);
+  background-color: white;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 20px lightblue;
 }
+
+.bold {
+  font-weight: 600;
+  margin: 16px;
+}
+
+.country > * {
+  display: flex;
+  align-items: center;
+}
+
+.steagu {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 1px 5px lightgray;
+}
+
+/* nav component */
 
 nav {
   display: flex;
@@ -39,21 +46,89 @@ nav {
   margin: 60px auto;
 }
 
-.country {
-  max-width: 1000px;
-  display: flex;
-  gap: 16px;
+.navTitle {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* country container */
+
+.countryContainer {
+  margin: 0 auto;
   flex-direction: column;
-  margin: 30px auto;
   align-items: center;
 }
 
+.continent {
+  margin-top: 32px;
+  margin-bottom: 72px;
+}
+
+.cardContainer {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+}
+
 a {
+  display: flex;
   text-decoration: none;
   color: black;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 1px 2px 20px lightblue;
+}
+
+a:hover {
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.05;
+  }
 }
 
 select {
   scale: 2;
   margin: 50px auto;
+}
+
+/* country component */
+
+.countryFlag {
+  width: 320px;
+  max-height: 160px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 1px 5px lightgray;
+}
+
+.title {
+  padding: 0 12px;
+  margin: auto;
+  text-align: center;
+}
+
+/* 404 component */
+
+.notFound {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: red;
 }
