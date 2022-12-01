@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 const OneCountry = () => {
   const { countryName } = useParams();
   const tari = useSelector((state) => state.countries);
+  console.log(countryName);
   const tara = tari.filter((item) => item.name.common === countryName)[0];
   while (tara === undefined) {
     return (<>Loading</>);

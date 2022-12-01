@@ -29,7 +29,7 @@ const CountryContainer = () => {
       </select>
       <section className="flex cardContainer">
         {workingArr.map((item) => (
-          <Link className="flex card" key={item.name.common} data-testid="country" to={`c/${item.name.common}`}>
+          <Link key={item.name.common} data-testid="country" to={`c/${item.name.common}`}>
             <Country name={item.name.common} flags={item.flags.png} />
           </Link>
         ))}
