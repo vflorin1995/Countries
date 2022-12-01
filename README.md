@@ -2,9 +2,6 @@
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h3><b>Countries</b></h3>
 
 </div>
@@ -22,23 +19,18 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
 # 📖 Countries <a name="about-project"></a>
 
-**Countries** is a project which lets you select any country from one continent and check the details of it like capital name, official language, latitude and logitude
+**Countries** is a project which lets you select any country from any continent and check the details of it like capital name, official language, latitude and logitude and timezones.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -52,8 +44,8 @@
 ### Key Features <a name="key-features"></a>
 
 - **Fetch data from RestCountries API**
-- **Select continent**
-- **Select country**
+- **Sort, filter and display the fetched data**
+- **Integrate links with ReactRouter**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,12 +100,6 @@ NPM Run test
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **Include animations**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
@@ -125,12 +111,6 @@ Feel free to check the [issues page](https://github.com/vflorin1995/Capstone3/is
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project give a star
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank Emilia for creating this awesome Captone task
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
